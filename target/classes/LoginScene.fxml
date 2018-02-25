@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="window" prefHeight="400.0" prefWidth="600.0" stylesheets="@css/commonWindow.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.LoginScene">
+    <children>
+      <Accordion layoutX="-1.0" layoutY="42.0" prefHeight="358.0" prefWidth="600.0">
+        <panes>
+          <TitledPane fx:id="loginPane" text="Вход">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="103.0" text="Логин" />
+                        <TextField fx:id="authLoginField" layoutX="14.0" layoutY="31.0" prefWidth="575.0" />
+                        <Label layoutX="14.0" layoutY="73.0" text="Пароль" />
+                        <PasswordField fx:id="authPassField" layoutX="14.0" layoutY="90.0" prefWidth="575.0" />
+                        <Button fx:id="authButton" layoutX="14.0" layoutY="138.0" mnemonicParsing="false" onAction="#authentificate" prefHeight="32.0" prefWidth="574.0" text="Вход" />
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane fx:id="regPane" text="Регистрация">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Accordion prefHeight="218.0" prefWidth="600.0">
+                          <panes>
+                            <TitledPane text="Обязательные поля">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Логин" />
+                                          <TextField fx:id="regLoginField" layoutX="14.0" layoutY="31.0" />
+                                          <PasswordField fx:id="regPassField" layoutX="221.0" layoutY="31.0" />
+                                          <Label layoutX="276.0" layoutY="14.0" text="Пароль" />
+                                          <Label layoutX="533.0" layoutY="14.0" text="Никнейм" />
+                                          <TextField fx:id="regNickField" layoutX="433.0" layoutY="31.0" />
+                                          <Label layoutX="14.0" layoutY="75.0" text="Почта" />
+                                          <TextField fx:id="regEmailField" layoutX="14.0" layoutY="92.0" prefWidth="357.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane text="Дополнительная инфомация">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="148.0" prefWidth="598.0">
+                                       <children>
+                                           <Label layoutX="14.0" layoutY="14.0" text="Имя" />
+                                           <TextField fx:id="regFNameField" layoutX="14.0" layoutY="31.0" />
+                                           <PasswordField fx:id="regSNameField" layoutX="221.0" layoutY="31.0" />
+                                           <Label layoutX="272.0" layoutY="14.0" text="Фамилия" />
+                                           <Label layoutX="541.0" layoutY="14.0" text="Возраст" />
+                                           <TextField fx:id="regAgeField" layoutX="433.0" layoutY="31.0" />
+                                       </children></AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                        <Button fx:id="regButton" layoutX="14.0" layoutY="232.0" mnemonicParsing="false" onAction="#registration" prefHeight="32.0" prefWidth="573.0" text="Зарегистрироваться" />
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <ToolBar fx:id="authtoolbar" nodeOrientation="RIGHT_TO_LEFT" prefHeight="33.0" prefWidth="600.0">
+        <items>
+          <Button id="exitButton" fx:id="exitButton" minHeight="10.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="208.0" prefWidth="74.0" text="Выход" />
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="498.0" text="Авторизация">
+               <font>
+                  <Font name="Calibri Bold Italic" size="23.0" />
+               </font>
+            </Label>
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.eclipse:org.eclipse.jdt.annotation:2.0.100">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/eclipse/org.eclipse.jdt.annotation/2.0.100/org.eclipse.jdt.annotation-2.0.100.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/eclipse/org.eclipse.jdt.annotation/2.0.100/org.eclipse.jdt.annotation-2.0.100-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/eclipse/org.eclipse.jdt.annotation/2.0.100/org.eclipse.jdt.annotation-2.0.100-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

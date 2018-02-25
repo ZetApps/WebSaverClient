@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import org.eclipse.fx.ui.controls.filesystem.DirectoryTreeView?>
+<?import org.eclipse.fx.ui.controls.filesystem.DirectoryView?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@css/material-fx-v0_3.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.MainScreen">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="800.0">
+         <left>
+            <DirectoryTreeView fx:id="dirView" prefHeight="560.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <DirectoryView fx:id="sDirView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <ToolBar fx:id="menuBar" minHeight="45.0" prefHeight="45.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <items>
+                  <MenuButton mnemonicParsing="false" text="Главное">
+                    <items>
+                      <MenuItem fx:id="logoutbtn" mnemonicParsing="false" onAction="#logout" text="Выход" />
+                      <MenuItem fx:id="quitappbtn" mnemonicParsing="false" onAction="#quitapp" text="Выйти из приложения" />
+                    </items>
+                  </MenuButton>
+                  <MenuButton mnemonicParsing="false" text="Файлы и папки">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Синхронизация" />
+                        <Menu mnemonicParsing="false" text="Файлы">
+                          <items>
+                              <MenuItem fx:id="addNewFileBtn" mnemonicParsing="false" onAction="#onAddNewFileBtnClick" text="Добавить файл" />
+                              <MenuItem fx:id="renamefilebtn" mnemonicParsing="false" onAction="#onfilerenameclick" text="Переименовать" />
+                              <MenuItem fx:id="deletefilebtn" mnemonicParsing="false" onAction="#ondeletefileaction" text="Удалить" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Папки">
+                          <items>
+                            <MenuItem fx:id="newfolderbtn" mnemonicParsing="false" onAction="#onnewfolderaction" text="Создать папку" />
+                              <MenuItem fx:id="deletefolderbtn" mnemonicParsing="false" onAction="#ondeletefolderaction" text="Удалить папку" />
+                          </items>
+                        </Menu>
+                    </items>
+                  </MenuButton>
+               </items>
+            </ToolBar>
+         </top>
+         <bottom>
+            <HBox fx:id="statusbar" alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ProgressIndicator fx:id="progress" prefHeight="35.0" prefWidth="45.0" progress="0.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </ProgressIndicator>
+                  <Label fx:id="statustext" minWidth="-Infinity" prefHeight="30.0" prefWidth="250.0" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
